@@ -1,0 +1,289 @@
+/*
+  1-Common Styles
+  2-General Style
+  3-Sections
+    3.0 header section
+    3.1 Home Section 
+    3.2 About Section 
+    3.3 Portfolio Section 
+    3.4 Services Section 
+    3.5 Contact Section
+*/
+
+/* 1-Common Styles */
+/*
+    -container
+    -overlay
+    -hero-image
+    -opacity hover
+    -section header
+    -section padding
+    -colors
+    -btn
+*/
+
+
+
+/* General Style  */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, button{
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--col-gen);
+}
+.container{
+  width: 85%;
+  margin: auto;
+}
+.clear{
+  clear: both;
+}
+.section-heeader .section-title{
+  font-size: 36px;
+}
+.line{
+  margin: auto ;
+  width: 60px;
+  height: 3px;
+  display: block;
+  background-color: var(--col-or);
+}
+.hover-opacity-o{
+  transition: opacity 0.5s;
+}
+.hover-opacity-o:hover{
+  opacity: .8;
+}
+.hover-opacity{
+opacity: .8;
+}
+.hover-opacity:hover{
+  opacity: 1;
+}
+a{
+  text-decoration: none;
+}
+.padd-y{
+  padding: 120px 0;
+}
+.section-heeader{
+  text-align: center;
+}
+/* hero image */
+.pos-rel{
+  position: relative;
+}
+.pos-abs{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+:root{
+  --col-or : #f4623a;
+  --col-whi : #fff;
+  --col-whi-d : #f8f9fa;
+  --col-bl : #343a40;
+  --col-gray : #6c757d;
+  --col-gen : #212529;
+}
+ul{
+  list-style: none;
+}
+.btn{
+  width: 180px;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 18px;
+  border: 0;
+  border-radius: 35px;
+  transition: opacity .5s;
+  cursor: pointer;
+}
+/* Sections */
+
+/* 3.0 header section */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  color: var(--col-whi);
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .logo{
+  width: 40%;
+  float: left;
+  padding: 20px 0;
+}
+header .logo .logo-title{
+  font-size: 22px;
+  text-transform: capitalize;
+}
+header nav{
+  width: 60%;
+  float: left;
+}
+header nav ul{
+  text-align: right;
+}
+header nav ul li{
+  display: inline-block;
+}
+header nav  ul li a{
+  display: block;
+  padding: 30px 13px;
+  color: var(--col-whi);
+}
+/* 3.1 Home Section */
+.home{
+  background-image: url(../images/bg-masthead.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgb(84 74 58 / 70%);
+  position: absolute;
+}
+.home-content{
+  text-align: center;
+  width: 65%;
+}
+.home .title{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px;
+}
+.home-desc ,.about-desc, .contact-desc{
+  margin: 30px auto ;
+  margin-bottom: 50px;
+  display: block;
+  width: 80%;
+  font-size: 18px;
+  color: var(--col-whi);
+  line-height: 1.5;
+}
+.btn-learn{
+  background-color:var(--col-or);
+  color: var(--col-whi);
+}
+
+
+/* About Section */
+.about{
+  background-color: var(--col-or);
+  text-align: center;
+}
+.about .section-title{
+  color: var(--col-whi);
+  font-size: 32px;
+}
+.about .section-heeader .line{
+  background-color: var(--col-whi);
+}
+.about .about-desc{
+width: 70% ;
+}
+.about-btn-start{
+  font-size: 14px;
+  font-weight: bold;
+}
+/* Services Section */
+.services .section-title{
+  font-weight: 300;
+}
+.services-item{
+  text-align: center;
+  padding: 0 10px;
+}
+.services-item .icon{
+  font-size: 60px;
+  color: var(--col-or);
+}
+.services-item .services-item-title{
+  font-weight: 500;
+  font-size: 25px;
+}
+.services-item .services-item-desc{
+  color: var(--col-gray);
+}
+
+/* Portfolio Section */
+.portfolio-item img{
+  width: 100%;
+}
+.portfolio-item-overlay{
+  position: absolute;
+  text-align: center;
+  background-color: rgba(194, 64, 12, 0.733);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: var(--col-whi);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s;
+}
+.portfolio-item-overlay-text{
+  font-size: 14px;
+  opacity: .5;
+}
+.portfolio-item-overlay-title{
+  margin-top: 5px;
+  font-weight: 400;
+}
+.portfolio-item:hover .portfolio-item-overlay{
+  opacity: 1;
+  visibility: visible;
+}
+.portfolio-download{
+  background-color: var(--col-bl);
+  text-align: center;
+}
+.portfolio-download .portfolio-download-title{
+  color: var(--col-whi);
+  font-size: 35px;
+}
+.portfolio-download .portfolio-download-btn{
+  width: 200px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* Contact Section */
+.contact{
+  text-align: center;
+}
+.contact .section-title{
+  font-weight: 400;
+  color: var(--col-gen);
+}
+.contact-desc{
+  width: 65%;
+  color: var(--col-gray);
+}
+.contact-item-info{
+  width: 60%;
+  margin: 50px auto 0;
+}
+.contact-item-info .contact-info .icon{
+  color: var(--col-gray);
+}
+.contact-item-info .contact-info .contact-email{
+  color: var(--col-or);
+}
+/* Footer Section */
+footer{
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--col-whi-d);
+}
+footer span{
+  color: var(--col-or);
+}
